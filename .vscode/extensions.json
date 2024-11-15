@@ -4,7 +4,6 @@
     "ms-toolsai.jupyter",
     "usernamehw.errorlens",
     "irongeek.vscode-env",
-    "donjayamanne.python-extension-pack",
     "charliermarsh.ruff"
   ]
 }
