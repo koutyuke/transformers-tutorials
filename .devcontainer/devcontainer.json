@@ -1,0 +1,26 @@
+{
+  "name": "transformers-tutorials",
+  "workspaceFolder": "/workspaces/transformers-tutorials/",
+  "dockerComposeFile": ["../docker/docker-compose.yaml"],
+  "service": "app",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "charliermarsh.ruff",
+        "EditorConfig.EditorConfig",
+        "ms-python.python",
+        "adam-bender.commit-message-editor",
+        "eamodio.gitlens",
+        "mhutchie.git-graph",
+        "ms-python.mypy-type-checker",
+        "ms-python.vscode-pylance",
+        "tamasfe.even-better-toml",
+        "VisualStudioExptTeam.vscodeintellicode",
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "streetsidesoftware.code-spell-checker",
+        "IronGeek.vscode-env"
+      ]
+    }
+  }
+}

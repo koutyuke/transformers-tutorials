@@ -1,0 +1,19 @@
+FROM ubuntu:latest
+
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
+RUN apt-get update \
+  && apt-get --no-install-recommends -y install git gnupg2 ca-certificates curl pipx \
+  && pipx ensurepath \
+  && curl -LsSf https://astral.sh/uv/install.sh | sh \
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/* 
+
+ENV PATH="/root/.local/bin:${PATH}"
+
+WORKDIR /workspaces/transformers-tutorials
+
+COPY ./.python-version ./pyproject.toml ./uv.lock ./
+
+RUN uv python install \
+  && uv sync --dev

@@ -1,0 +1,11 @@
+services:
+  app:
+    container_name: tranformer-tutorial
+    build:
+      context: ../
+      dockerfile: ./docker/Dockerfile
+    volumes:
+      - type: bind
+        source: ../
+        target: /workspaces/transformers-tutorials
+    tty: true
