@@ -3,9 +3,10 @@ FROM ubuntu:latest
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 RUN apt-get update \
-  && apt-get --no-install-recommends -y install git gnupg2 ca-certificates curl pipx \
+  && apt-get --no-install-recommends -y install git gnupg2 ca-certificates curl pipx build-essential \
   && pipx ensurepath \
   && curl -LsSf https://astral.sh/uv/install.sh | sh \
+  && curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* 
 
