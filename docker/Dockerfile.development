@@ -9,11 +9,11 @@ RUN apt-get update \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* 
 
-ENV PATH="/root/.local/bin:${PATH}"
+# ENV PATH="/root/.local/bin:${PATH}"
 
 WORKDIR /workspaces/transformers-tutorials
 
-COPY ./.python-version ./pyproject.toml ./uv.lock ./
+# COPY ./.python-version ./pyproject.toml ./uv.lock ./
 
-RUN uv python install \
-  && uv sync --dev
+# RUN uv python install \
+#   && uv sync

@@ -1,7 +1,7 @@
 {
   "name": "transformers-tutorials",
   "workspaceFolder": "/workspaces/transformers-tutorials/",
-  "dockerComposeFile": ["../docker/docker-compose.yaml"],
+  "dockerComposeFile": ["../docker/docker-compose.development.yaml"],
   "service": "app",
   "customizations": {
     "vscode": {
@@ -19,8 +19,11 @@
         "GitHub.copilot",
         "GitHub.copilot-chat",
         "streetsidesoftware.code-spell-checker",
-        "IronGeek.vscode-env"
+        "IronGeek.vscode-env",
+        "ms-toolsai.jupyter"
       ]
     }
-  }
+  },
+  "postCreateCommand": "uv python install && uv sync",
+  "remoteUser": "root"
 }

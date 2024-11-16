@@ -3,7 +3,7 @@ services:
     container_name: tranformer-tutorial
     build:
       context: ../
-      dockerfile: ./docker/Dockerfile
+      dockerfile: ./docker/Dockerfile.development
     volumes:
       - type: bind
         source: ../
